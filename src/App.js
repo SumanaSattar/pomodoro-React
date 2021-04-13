@@ -7,8 +7,8 @@ function App() {
   return (
     <div className='App'>
       <h1>Pomodoro</h1>
-      <p>Focus on being productive instead of busy</p>
-        {/* <SetPomodoro/> */}
+      <p className='whiteFont'>Focus on being productive instead of busy</p>
+        <SetPomodoro/> 
         <CountDown />
 
     </div>
