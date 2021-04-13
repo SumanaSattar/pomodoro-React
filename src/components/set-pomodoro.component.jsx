@@ -27,6 +27,7 @@ const SetPomodoro = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(newTimer)
+        //updateExecute(newTimer);
 
     }
     return ( 
