@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import SettingContextProvider from './context/setting-context';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <SettingContextProvider>
     <App />
-  </React.StrictMode>,
+  </SettingContextProvider>,
   document.getElementById('root')
 );
 
