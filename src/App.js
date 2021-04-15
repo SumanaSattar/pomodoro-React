@@ -2,8 +2,10 @@ import React, { useContext, useEffect } from 'react';
 import './App.css';
 import Button from './components/button.component';
 import CountDown from './components/countdown-animation.component';
+import NavBar from './components/navbar/navbar.component';
 import SetPomodoro from './components/set-pomodoro.component';
 import { SettingContext } from './context/setting-context';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 
 
 function App() {
@@ -11,6 +13,13 @@ function App() {
   useEffect(()=> updateExecute(executing) , [executing , startAnimate])
   return (
     <div className='App'>
+      <Router>
+          <NavBar/>
+          <Switch>
+            <Route exact path='/' ></Route>
+          </Switch>
+      </Router>
+    
       <h1>Pomodoro</h1>
       <p className='whiteFont'>Focus on being productive instead of busy</p>
       { pomodoro===0 ?
