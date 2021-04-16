@@ -6,9 +6,9 @@ import {SettingContext} from '../context/setting-context'
 const SetPomodoro = () => {
     const {updateExecute} = useContext(SettingContext);
     const [newTimer , setNewTimer] = useState({
-        work:0.3,
-        short:0.2,
-        long:1,
+        work:30,
+        short:5,
+        long:30,
         active:'work'
     })
     const handleChange=(e)=>{
@@ -37,6 +37,11 @@ const SetPomodoro = () => {
     return ( 
         <div className="form-container">
             <form noValidate>
+                <div className="input-label">
+                    <span>Work</span>
+                    <span>Short Break</span>
+                    <span>Long Break</span>
+                </div>
                 <div className="input-wrapper"> 
                     <input className="input" name="work" onChange={handleChange} value={newTimer.work}/>
                     <input className="input" name="shortBreak" onChange={handleChange} value={newTimer.short}/>

@@ -22,14 +22,11 @@ code {
 }
 
 .container {
-  color:#c9ccea;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  background: rgb(39,42,85);
-  background: radial-gradient(circle, #1E2140 0%, #151932 65%); 
+  align-content: flex-start;
 }
 
 .container h1 {
@@ -43,18 +40,17 @@ code {
   text-transform: uppercase;
   font-size: .8rem;
   padding:.3rem .3rem;
-  background-color: #0C0E1B;
   border-radius: 1.5rem;
 }
 
 .active-label {
-  color: #0C0E1B;
-  background-color: #FE6F6B;
+  color:white;
+  background-color:rgba(45,92,253,1);
 }
 
 .timer-container {
   display: flex;
-  flex:2;
+  margin:1rem;
   align-items: center;
   justify-content: center;
 }
@@ -91,10 +87,9 @@ button {
   cursor: pointer;
 }
 
-.button-wrapper button.activve {
-  color: #0C0E1B;
-  background-color: #C9CCEA;
-  border: 1px solid #0C0E1B;
+.button-wrapper button.active {
+  background-color:rgba(34,193,195,1);
+  color:white;
 }
 .form-container {
   text-align: center;
@@ -113,4 +108,7 @@ button {
   margin-right: 0.3rem;
   text-align: center;
   font-size: 14pt;
+}
+.input-label{
+  font-size: 20px;
 }

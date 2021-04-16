@@ -4,11 +4,13 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    padding-left: 1rem;
+
   }
   
   .menu-bars {
-    margin-left: 2rem;
-    font-size: 2rem;
+    margin-left:80%;
+    font-size: 1.2rem;
     background: none;
   }
   
