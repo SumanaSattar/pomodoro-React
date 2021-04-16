@@ -12,7 +12,7 @@ const NavBar = () => {
     return ( 
         <>
         <IconContext.Provider value={{color:'#060b26'}}>
-        <div className='navbar'>
+          <div className='navbar'>
                 <Link to="#">
                     <FaAwe.FaBars onClick={showSidebar}/>
                 </Link>
