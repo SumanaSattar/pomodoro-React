@@ -7,9 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import SettingContextProvider from './context/setting-context';
 
 ReactDOM.render(
-  <SettingContextProvider>
-    <App />
-  </SettingContextProvider>,
+   <React.StrictMode>
+       <SettingContextProvider>
+          <App />
+       </SettingContextProvider>
+      
+  </React.StrictMode>,
+  
+  
   document.getElementById('root')
 );
 
