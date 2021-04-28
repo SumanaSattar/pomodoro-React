@@ -3,19 +3,18 @@
     background-color: #292f38;
     width: 25%;
     min-width: 450px;
-    height: 600px;
+    height: 400px;
     padding: 30px;
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   }
   
-  .header h1 {
-    color: #ccc;
-    font-weight: 300;
+  .header {
+    color: rgb(250, 250, 250);
     text-align: center;
     margin: 50px 20px 60px 20px;
-    font-family: 'Josefin Slab', serif;
+   
   }
   
   .main {
@@ -29,7 +28,6 @@
   .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 10px;
   }
@@ -84,8 +82,8 @@
   
   .add-task-btn {
     min-width: 100px;
-    background-color: #790e43;
-    color: #ccc;
+    background-color: #faf8f9;
+    color:rgb(34,193,195);
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -97,9 +95,6 @@
   
   .list-item {
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    padding-bottom: 5px;
   }
   
   .list-item span {
@@ -113,13 +108,13 @@
     outline: none;
   }
   
-  .btn-delete i {
+  .btn-delete {
     font-size: 16px;
     color: #bbb;
     margin-right: 20px;
   }
   
-  .btn-edit i {
+  .btn-edit  {
     font-size: 16px;
     color: #bbb;
     margin-right: 20px;
@@ -128,7 +123,7 @@
   .clear-btn {
     width: 100px;
     height: 35px;
-    background-color: #790e43;
+    background-color: #fcfcfc;
     color: #ccc;
     border: none;
     font-family: 'Montserrat', sans-serif;

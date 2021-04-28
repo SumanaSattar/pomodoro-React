@@ -1,0 +1,9 @@
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: rgb(34,193,195);
+}
+.DayPicker-Weekday {
+    color:white;
+}
+.DayPicker-NavButton--prev {
+    color:white;
+}

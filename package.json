@@ -7,14 +7,18 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.4.1",
+    "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^17.0.2",
     "react-countdown-circle-timer": "^2.5.1",
+    "react-date-picker": "^8.1.1",
+    "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
     "react-icon": "^1.0.0",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "uuid": "^8.3.2",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
@@ -27,8 +31,7 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4",
-    "moment": "^2.24.0"
+    "workbox-streams": "^5.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,12 +1,21 @@
 import { createContext, useState } from "react";
 
+
 export const SettingContext = createContext();
 
 const SettingContextProvider = (props) => {
-
+    const [tasks,setTasks]=useState([
+        {title:'read book',key:1},
+        {title:'run for an hour',key:2},
+        {title:'code for an hour',key:3},
+    ])
     const [pomodoro,setPomodoro] = useState(0);
     const [executing,setExecuting] = useState({});
     const [startAnimate,setStartAnimate] = useState(false);
+
+    const addTask = (title) => {
+       setTasks([...tasks,{title:title,id:4}])
+    }
 
     function setCurrentTimer (activeState) {
         updateExecute({...executing,
@@ -67,11 +76,13 @@ const SettingContextProvider = (props) => {
             pomodoro,
             executing,
             startAnimate,
+            tasks,
             setCurrentTimer,
             startTimer,
             pauseTimer,
             stopTimer,
             settingBtn,
+            addTask,
             children
         }}>
             {props.children}
