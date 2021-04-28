@@ -2,7 +2,7 @@ import {Component} from 'react'
 import DayPicker, { DateUtils } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import './add-task.styles.css'
-const Calender= () =>  {
+class Calender extends Component  {
     constructor(props) {
       super(props);
       this.handleDayClick = this.handleDayClick.bind(this);

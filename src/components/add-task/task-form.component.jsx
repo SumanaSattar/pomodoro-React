@@ -1,14 +1,22 @@
 import { useContext,useState} from 'react'
 import {SettingContext} from './../../context/setting-context'
 import Calender from './calender.component'
+import DatePicker from 'react-date-picker';
 
 const TaskForm = () =>  {
+
+      const [value, onChange] = useState(new Date());
+      const today= value;
+      const [arrValue,setArrValue] = useState([]);
+
       const[task,setTask]=useState('');
+
       const {addTask}=useContext(SettingContext);
 
       const submitHandler = (e) => {
           e.preventDefault();
           addTask(task);
+          const array = value.split(' ');
         }
       const  changeHandler = (e) => {
         setTask(e.target.value);
@@ -27,7 +35,14 @@ const TaskForm = () =>  {
               required
               className="task-input"
             />
-            <Calender/>
+             <div>
+                <DatePicker
+                  onChange={onChange}
+                  value={value}
+                />
+                {console.log(value)}
+                {console.log(today)}
+              </div>
            
             <div className="buttons">
               <button type="submit" className="btn add-task-btn">
@@ -37,6 +52,7 @@ const TaskForm = () =>  {
                 Clear
               </button>
             </div>
+            
       </form>
      );
    }
