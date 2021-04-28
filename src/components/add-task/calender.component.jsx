@@ -1,8 +1,8 @@
 import {Component} from 'react'
 import DayPicker, { DateUtils } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-
-class Calender extends Component  {
+import './add-task.styles.css'
+const Calender= () =>  {
     constructor(props) {
       super(props);
       this.handleDayClick = this.handleDayClick.bind(this);

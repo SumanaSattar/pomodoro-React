@@ -14,7 +14,7 @@ const SettingContextProvider = (props) => {
     const [startAnimate,setStartAnimate] = useState(false);
 
     const addTask = (title) => {
-       setTasks([...tasks,{title:title,id:4}])
+       setTasks([{title:title,id:4},...tasks])
     }
 
     function setCurrentTimer (activeState) {
