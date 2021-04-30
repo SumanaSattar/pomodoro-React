@@ -14,7 +14,7 @@ const SettingContextProvider = (props) => {
     const [pomodoro,setPomodoro] = useState(0);
     const [executing,setExecuting] = useState({});
     const [startAnimate,setStartAnimate] = useState(false);
-    const [today,setToday] = useState(false);
+    const [todayCheck,setTodayCheck] = useState(false);
 
     const addTask = (title,date) => {
        setTasks([{title:title,id:4,date:date},...tasks])
@@ -28,7 +28,9 @@ const SettingContextProvider = (props) => {
         return formattedDate;
         
     }
-
+    const checkingTodayTask = () => {
+        setTodayCheck(true);
+    }
     function setCurrentTimer (activeState) {
         updateExecute({...executing,
                         active:activeState})
@@ -89,8 +91,9 @@ const SettingContextProvider = (props) => {
             executing,
             startAnimate,
             tasks,
-            today,
+            todayCheck,
             date,
+            checkingTodayTask,
             setCurrentTimer,
             startTimer,
             pauseTimer,

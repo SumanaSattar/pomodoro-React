@@ -2,7 +2,7 @@ import {useContext} from 'react';
 import {SettingContext} from '../context/setting-context'
 import Tasks from './add-task/tasks.component'
 const TodayList = () => {
-    const {tasks , formattingDate,today} = useContext(SettingContext);
+    const {tasks , formattingDate,checkingTodayTask} = useContext(SettingContext);
     const today = formattingDate(new Date())
     
 
@@ -12,7 +12,8 @@ const TodayList = () => {
                {tasks.map((task)=> 
                     {
                         if(today===task.date){
-                            setToday(true);
+                           
+                            checkingTodayTask();
                             return <Tasks task={task} key={task.id}/>
                         }
                         

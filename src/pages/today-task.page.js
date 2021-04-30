@@ -4,7 +4,7 @@ import {SettingContext} from '../context/setting-context'
 import { useContext } from "react";
 
 const TodayTask = () => {
-    const {today}=useContext(SettingContext);
+    const {todayCheck}=useContext(SettingContext);
     return ( 
         <div>
             
@@ -13,7 +13,7 @@ const TodayTask = () => {
                     <div className="app-wrapper">
                         <div className="main">
                             <TodayList/>
-                            { (!today)? <p>no task for today</p>:null}
+                            { (!todayCheck)? <p>no task for today</p>:null}
                         </div>
                     </div>
                 </div>
