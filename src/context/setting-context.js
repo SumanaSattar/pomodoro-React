@@ -5,16 +5,28 @@ export const SettingContext = createContext();
 
 const SettingContextProvider = (props) => {
     const [tasks,setTasks]=useState([
-        {title:'read book',key:1},
-        {title:'run for an hour',key:2},
-        {title:'code for an hour',key:3},
+        {title:'read book',key:1,date:'today'},
+        {title:'run for an hour',key:2,date:'today'},
+        {title:'code for an hour',key:3,date:'today'},
     ])
+    const [date,setDate]=useState([]);
+    
     const [pomodoro,setPomodoro] = useState(0);
     const [executing,setExecuting] = useState({});
     const [startAnimate,setStartAnimate] = useState(false);
+    const [today,setToday] = useState(false);
 
-    const addTask = (title) => {
-       setTasks([{title:title,id:4},...tasks])
+    const addTask = (title,date) => {
+       setTasks([{title:title,id:4,date:date},...tasks])
+    }
+    const formattingDate = (dateObject) => {
+        console.log(dateObject);
+        const date =dateObject.getDate();
+        const month = dateObject.getMonth();
+        const year = dateObject.getFullYear();
+        const formattedDate= date + "/"+ month+"/" + year
+        return formattedDate;
+        
     }
 
     function setCurrentTimer (activeState) {
@@ -77,12 +89,15 @@ const SettingContextProvider = (props) => {
             executing,
             startAnimate,
             tasks,
+            today,
+            date,
             setCurrentTimer,
             startTimer,
             pauseTimer,
             stopTimer,
             settingBtn,
             addTask,
+            formattingDate,
             children
         }}>
             {props.children}

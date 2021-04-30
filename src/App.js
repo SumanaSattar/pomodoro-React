@@ -9,6 +9,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import AddTask from './pages/add-task.page';
 import Pomodoro from './components/pomodoro.component';
 import SettingContextProvider from './context/setting-context';
+import TodayTask from './pages/today-task.page';
 
 
 
@@ -24,6 +25,7 @@ function App() {
               <Switch>
                 <Route exact path='/' ><Pomodoro/></Route>
                 <Route  path='/add-task' ><AddTask/></Route>
+                <Route  path='/today' ><TodayTask/></Route>
               </Switch>
           </Router>
         </div>

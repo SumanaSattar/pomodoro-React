@@ -6,10 +6,9 @@ import './add-task.page.css'
 const AddTask = () => {
     return ( 
         <div>
-            <h1 className="header">Add Task</h1>
             <div className="buttons">
                 <TaskForm/>
-                <div className='container'>
+                <div className='container center'>
                     <div className="app-wrapper">
                         <div className="main">
                             <TaskList/>

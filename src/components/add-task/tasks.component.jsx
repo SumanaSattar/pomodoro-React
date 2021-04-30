@@ -11,7 +11,7 @@ const Tasks = ({task}) => {
            
         </li>
         <li className='list-item'>
-            <span>today</span>
+            <span>{task.date}</span>
         </li>
         <hr></hr>  
         </div>

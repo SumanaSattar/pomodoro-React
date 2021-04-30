@@ -13,15 +13,15 @@ export  const NavBarData = [
         cName:'nav-text'
     },
     {
-        title:'Event',
-        path:'/event',
-        icon:<FaAwe.FaRegCalendar/>,
+        title:'Tomorrow',
+        path:'/tomorrow',
+        icon:<FaAwe.FaStarHalfAlt/>,
         cName:'nav-text'
     },
     {
-        title:'Completed Task',
+        title:'Unfinished Task',
         path:'/completed',
-        icon:<FaAwe.FaRegCalendarCheck/>,
+        icon:<FaAwe.FaStarHalf/>,
         cName:'nav-text'
     },
     {
