@@ -5,9 +5,9 @@ export const SettingContext = createContext();
 
 const SettingContextProvider = (props) => {
     const [tasks,setTasks]=useState([
-        {title:'read book',key:1,date:'today'},
-        {title:'run for an hour',key:2,date:'today'},
-        {title:'code for an hour',key:3,date:'today'},
+        {title:'read book',key:1,date:'1/4/2021'},
+        {title:'run for an hour',key:2,date:'5/4/2021'},
+        {title:'code for an hour',key:3,date:'4/4/2021'},
     ])
     const [date,setDate]=useState([]);
     
@@ -15,6 +15,8 @@ const SettingContextProvider = (props) => {
     const [executing,setExecuting] = useState({});
     const [startAnimate,setStartAnimate] = useState(false);
     const [todayCheck,setTodayCheck] = useState(false);
+    const [tomorrowCheck,setTomorrowCheck] = useState(false);
+    const [unfinishedCheck,setUnfinishedCheck] = useState(false);
 
     const addTask = (title,date) => {
        setTasks([{title:title,id:4,date:date},...tasks])
@@ -30,6 +32,12 @@ const SettingContextProvider = (props) => {
     }
     const checkingTodayTask = () => {
         setTodayCheck(true);
+    }
+    const checkingTomorrowTask = () => {
+        setTomorrowCheck(true);
+    }
+    const checkingUnfinishedTask = () => {
+        setUnfinishedCheck(true);
     }
     function setCurrentTimer (activeState) {
         updateExecute({...executing,
@@ -92,8 +100,12 @@ const SettingContextProvider = (props) => {
             startAnimate,
             tasks,
             todayCheck,
+            tomorrowCheck,
+            unfinishedCheck,
             date,
             checkingTodayTask,
+            checkingTomorrowTask,
+            checkingUnfinishedTask,
             setCurrentTimer,
             startTimer,
             pauseTimer,

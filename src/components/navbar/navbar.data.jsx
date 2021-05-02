@@ -20,7 +20,7 @@ export  const NavBarData = [
     },
     {
         title:'Unfinished Task',
-        path:'/completed',
+        path:'/unfinished',
         icon:<FaAwe.FaStarHalf/>,
         cName:'nav-text'
     },
