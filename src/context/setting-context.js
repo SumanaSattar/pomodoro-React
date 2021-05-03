@@ -18,6 +18,7 @@ const SettingContextProvider = (props) => {
     const [todayCheck,setTodayCheck] = useState(false);
     const [tomorrowCheck,setTomorrowCheck] = useState(false);
     const [unfinishedCheck,setUnfinishedCheck] = useState(false);
+    const [taskPomodoro,setTaskPomodoro] = useState([])
     const [play,setPlay] = useState(0);
 
     const addTask = (title,date) => {
@@ -26,8 +27,8 @@ const SettingContextProvider = (props) => {
     const updatedTask = (key) => {
         setTasks(tasks.filter(num=>num.key !== key))
     }
-    const settingPlay = () => {
-        setPlay(1);
+    const settingPlay = (val) => {
+        setPlay(val);
     }
     const formattingDate = (dateObject) => {
         console.log(dateObject);
@@ -37,6 +38,9 @@ const SettingContextProvider = (props) => {
         const formattedDate= date + "/"+ month+"/" + year
         return formattedDate;
         
+    }
+    const settingTaskPomodoro = (arr) => {
+        setTaskPomodoro(arr)
     }
     const checkingTodayTask = () => {
         setTodayCheck(true);
@@ -112,6 +116,8 @@ const SettingContextProvider = (props) => {
             unfinishedCheck,
             date,
             play,
+            taskPomodoro,
+            settingTaskPomodoro,
             settingPlay,
             updatedTask,
             checkingTodayTask,
