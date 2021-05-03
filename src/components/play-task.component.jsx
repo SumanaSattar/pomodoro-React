@@ -9,7 +9,7 @@ const PlayTask = () => {
      }
      const doneHandled = ()=> {
         settingPlay(0);
-        updatedTask(taskPomodoro.key)
+        updatedTask(taskPomodoro.id)
      }
     return ( 
         <div className="play-container">
