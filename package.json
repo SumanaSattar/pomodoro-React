@@ -2,7 +2,7 @@
   "name": "name-of-ur-project",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/SumanaSattar/pomodoro-React.git",
+  "homepage":"https://SumanaSattar.github.io/pomodoro-React",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
