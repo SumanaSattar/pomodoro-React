@@ -14,7 +14,7 @@ const UnFinishedList = () => {
                     {
                         const tomorrowSplit =task.date.split('/');
 
-                        if((Number(tomorrowSplit[0]) < Number(todaySplit[0]) ) && (Number(tomorrowSplit[1]) <= Number(todaySplit[1])) && (Number(tomorrowSplit[2])<=Number(todaySplit[2])))
+                        if((Number(tomorrowSplit[0]) < Number(todaySplit[0] )) && (Number(tomorrowSplit[1]) <= Number(todaySplit[1])) && (Number(tomorrowSplit[2])<=Number(todaySplit[2])))
                         {
                             checkingUnfinishedTask();
                             return <Tasks task={task} key={task.id}/>

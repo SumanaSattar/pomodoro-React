@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import { createContext, useState } from "react";
 
 
@@ -17,9 +18,16 @@ const SettingContextProvider = (props) => {
     const [todayCheck,setTodayCheck] = useState(false);
     const [tomorrowCheck,setTomorrowCheck] = useState(false);
     const [unfinishedCheck,setUnfinishedCheck] = useState(false);
+    const [play,setPlay] = useState(0);
 
     const addTask = (title,date) => {
        setTasks([{title:title,id:4,date:date},...tasks])
+    }
+    const updatedTask = (key) => {
+        setTasks(tasks.filter(num=>num.key !== key))
+    }
+    const settingPlay = () => {
+        setPlay(1);
     }
     const formattingDate = (dateObject) => {
         console.log(dateObject);
@@ -103,6 +111,9 @@ const SettingContextProvider = (props) => {
             tomorrowCheck,
             unfinishedCheck,
             date,
+            play,
+            settingPlay,
+            updatedTask,
             checkingTodayTask,
             checkingTomorrowTask,
             checkingUnfinishedTask,

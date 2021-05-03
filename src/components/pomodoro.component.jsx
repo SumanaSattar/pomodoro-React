@@ -6,12 +6,15 @@ import SetPomodoro from './set-pomodoro.component';
 
 
 
+
 function Pomodoro() {
-    const {pomodoro,executing,setCurrentTimer,settingBtn,children,startAnimate,startTimer,pauseTimer,updateExecute} = useContext(SettingContext)
+    const {pomodoro,play,executing,setCurrentTimer,settingBtn,children,startAnimate,startTimer,pauseTimer,updateExecute} = useContext(SettingContext)
     useEffect(()=> updateExecute(executing) , [executing , startAnimate])
+
     return ( 
         <>
         <div className='container'>
+          {(play === 1 ? <p>task play</p> : null)}
           <h1>Pomodoro</h1>
           <p className='whiteFont'>Focus on being productive instead of busy</p>
           { pomodoro===0 ?

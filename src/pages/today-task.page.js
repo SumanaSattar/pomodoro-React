@@ -5,9 +5,10 @@ import { useContext } from "react";
 
 const TodayTask = () => {
     const {todayCheck}=useContext(SettingContext);
+    
     return ( 
         <div>
-            
+            {console.log(todayCheck)}
             <div className='container'>
                     <h1>Today's Task</h1>
                     <div className="app-wrapper">
