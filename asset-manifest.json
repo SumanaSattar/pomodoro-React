@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/SumanaSattar/pomodoro-React.git/static/css/main.3fd451fe.chunk.css",
+    "main.js": "/SumanaSattar/pomodoro-React.git/static/js/main.6e874d1e.chunk.js",
+    "main.js.map": "/SumanaSattar/pomodoro-React.git/static/js/main.6e874d1e.chunk.js.map",
+    "runtime-main.js": "/SumanaSattar/pomodoro-React.git/static/js/runtime-main.7b9caac7.js",
+    "runtime-main.js.map": "/SumanaSattar/pomodoro-React.git/static/js/runtime-main.7b9caac7.js.map",
+    "static/css/2.0cfad52a.chunk.css": "/SumanaSattar/pomodoro-React.git/static/css/2.0cfad52a.chunk.css",
+    "static/js/2.1314a91d.chunk.js": "/SumanaSattar/pomodoro-React.git/static/js/2.1314a91d.chunk.js",
+    "static/js/2.1314a91d.chunk.js.map": "/SumanaSattar/pomodoro-React.git/static/js/2.1314a91d.chunk.js.map",
+    "static/js/3.8ca19cfb.chunk.js": "/SumanaSattar/pomodoro-React.git/static/js/3.8ca19cfb.chunk.js",
+    "static/js/3.8ca19cfb.chunk.js.map": "/SumanaSattar/pomodoro-React.git/static/js/3.8ca19cfb.chunk.js.map",
+    "index.html": "/SumanaSattar/pomodoro-React.git/index.html",
+    "service-worker.js": "/SumanaSattar/pomodoro-React.git/service-worker.js",
+    "service-worker.js.map": "/SumanaSattar/pomodoro-React.git/service-worker.js.map",
+    "static/css/2.0cfad52a.chunk.css.map": "/SumanaSattar/pomodoro-React.git/static/css/2.0cfad52a.chunk.css.map",
+    "static/css/main.3fd451fe.chunk.css.map": "/SumanaSattar/pomodoro-React.git/static/css/main.3fd451fe.chunk.css.map",
+    "static/js/2.1314a91d.chunk.js.LICENSE.txt": "/SumanaSattar/pomodoro-React.git/static/js/2.1314a91d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b9caac7.js",
+    "static/css/2.0cfad52a.chunk.css",
+    "static/js/2.1314a91d.chunk.js",
+    "static/css/main.3fd451fe.chunk.css",
+    "static/js/main.6e874d1e.chunk.js"
+  ]
+}
