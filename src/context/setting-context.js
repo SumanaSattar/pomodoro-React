@@ -1,15 +1,18 @@
-import { render } from "@testing-library/react";
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 
 export const SettingContext = createContext();
 
+
 const SettingContextProvider = (props) => {
-    const [tasks,setTasks]=useState([
-        {title:'read book',key:1,date:'1/4/2021'},
-        {title:'run for an hour',key:2,date:'5/4/2021'},
-        {title:'code for an hour',key:3,date:'4/4/2021'},
-    ])
+    const initialState = JSON.parse(localStorage.getItem("tasks")) || [];
+    const [tasks,setTasks]=useState(initialState)
+    useEffect(()=>{
+        localStorage.setItem("tasks",JSON.stringify(tasks))
+    },[tasks]
+    )
+   
     const [date,setDate]=useState([]);
     
     const [pomodoro,setPomodoro] = useState(0);
@@ -22,10 +25,13 @@ const SettingContextProvider = (props) => {
     const [play,setPlay] = useState(0);
 
     const addTask = (title,date) => {
-       setTasks([{title:title,id:4,date:date},...tasks])
+       setTasks([{title:title,id:uuidv4(),date:date},...tasks])
+       console.log(tasks.id)
     }
     const updatedTask = (key) => {
-        setTasks(tasks.filter(num=>num.key !== key))
+        setTasks(tasks.filter(num=>num.id !== key))
+        console.log(setTasks(tasks.filter(num=>num.id !== key)))
+
     }
     const settingPlay = (val) => {
         setPlay(val);
