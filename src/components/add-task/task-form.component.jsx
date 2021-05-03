@@ -19,6 +19,7 @@ const TaskForm = () =>  {
       const submitHandler = (e) => {
           e.preventDefault();
           addTask(task,formattingDate(startDate)); 
+          setTask(" ")
          
           
         }
@@ -35,7 +36,7 @@ const TaskForm = () =>  {
             <input
               type="text"
               placeholder="Add Task..."
-            
+              value={task}
               onChange={changeHandler}
               required
               className="task-input"
