@@ -3,18 +3,19 @@ import Button from './button.component';
 import CountDown from './countdown-animation.component';
 import React, { useContext, useEffect } from 'react';
 import SetPomodoro from './set-pomodoro.component';
+import PlayTask from './play-task.component';
 
 
 
 
 function Pomodoro() {
-    const {pomodoro,play,executing,setCurrentTimer,settingBtn,children,startAnimate,startTimer,pauseTimer,updateExecute} = useContext(SettingContext)
+    const {pomodoro,play,executing,setCurrentTimer,settingBtn,children,startAnimate,startTimer,pauseTimer,updateExecute,tasks} = useContext(SettingContext)
     useEffect(()=> updateExecute(executing) , [executing , startAnimate])
 
     return ( 
         <>
         <div className='container'>
-          {(play === 1 ? <p>task play</p> : null)}
+          {(play === 1 ? <PlayTask task={tasks}/> : null)}
           <h1>Pomodoro</h1>
           <p className='whiteFont'>Focus on being productive instead of busy</p>
           { pomodoro===0 ?

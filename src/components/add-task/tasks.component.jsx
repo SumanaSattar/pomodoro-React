@@ -2,16 +2,12 @@ import * as FaAwe from "react-icons/fa"
 import {useContext} from 'react'
 import {SettingContext} from '../../context/setting-context'
 const Tasks = ({task}) => {
-    const {updatedTask,settingPlay,play}=useContext(SettingContext);
+    const {updatedTask,settingPlay,play,settingTaskPomodoro}=useContext(SettingContext);
  
 
     const playTask = () => {
-        console.log("play")
-        console.log(play)
-        settingPlay();
-        console.log(play)
-    
-
+        settingPlay(1);
+        settingTaskPomodoro(task);
     }
     return ( 
         <div>
