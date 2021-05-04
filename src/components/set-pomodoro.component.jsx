@@ -26,11 +26,10 @@ const SetPomodoro = () => {
             default:
                 break;
         }
-        console.log(newTimer)
+       
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(newTimer)
         updateExecute(newTimer);
 
     }

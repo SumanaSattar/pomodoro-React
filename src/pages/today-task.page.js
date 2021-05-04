@@ -8,13 +8,12 @@ const TodayTask = () => {
     
     return ( 
         <div>
-            {console.log(todayCheck)}
             <div className='container'>
                     <h1>Today's Task</h1>
                     <div className="app-wrapper">
                         <div className="main">
                             <TodayList/>
-                            { (!todayCheck)? <p>no task for today</p>:null}
+                            { (!todayCheck)? <p className='no-task-color'>no task for today</p>:null}
                         </div>
                     </div>
                 </div>

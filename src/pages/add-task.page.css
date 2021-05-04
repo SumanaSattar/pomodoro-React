@@ -1,6 +1,6 @@
 
   .app-wrapper {
-    background-color: #292f38;
+    background-color: #151932;
     width: 25%;
     min-width: 450px;
     height: 400px;
@@ -65,7 +65,7 @@
     font-family: 'Josefin Sans', serif;
     font-size: 15px;
     color: #ccc;
-    background-color: #1d222b;
+    background-color: #151932;
     border: 1px solid #444;
     outline: none;
     border-radius: 20px;
@@ -98,10 +98,11 @@
   
   .list-item {
     display: flex;
+    justify-content: space-between;
   }
   
   .list-item span {
-    color: #999;
+    color:white;
   }
   
   .task-btn {
@@ -110,7 +111,7 @@
     border: none;
     outline: none;
   }
-  
+ 
   .btn-delete {
     font-size: 16px;
     color: #bbb;
@@ -129,13 +130,77 @@
     font-size: 18px;
     margin-top: 20px;
   }
+
   .center {
     justify-content: center;
   }
+
   .play-container {
     background-color: white;
     display:flex;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .no-task-color {
+    color:white;
+    text-align: center;
+  }
+
+  .date-task {
+    justify-content: end;
+  }
+
+  .play-container > span {
+    margin-top:6px;
+  }
+
+  .container-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 850px) {
+
+    .container-task {
+      flex-direction: column;
+      
+    }
+
+    .center {
+      justify-content: flex-start;
+    }
+
+    .input-wrapper input {
+      width:20px;
+      height:20px;
+    }
+
+    .navbar {
+      height: 25px;
+      padding-left: 0.5rem
+    }
+
+    .task-btn {
+      margin-right:12px
+    }
+
+    .task-input {
+      width:250px;
+    }
+
+    .container h1 {
+      font-size: 1.8rem;
+    }
+
+    .button-wrapper {
+      padding:0.1rem;
+    }
+
+    .whiteFont {
+      display:none;
+    }
+    
   }
  

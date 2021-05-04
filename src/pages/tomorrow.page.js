@@ -8,13 +8,12 @@ const Tomorrow= () => {
     const {tomorrowCheck}=useContext(SettingContext);
     return ( 
         <div>
-            
             <div className='container'>
                     <h1>Tomorrow Task</h1>
                     <div className="app-wrapper">
                         <div className="main">
                             <TomorrowList/>
-                            { (!tomorrowCheck)? <p>no task for tomorrow</p>:null}
+                            { (!tomorrowCheck)? <p className='no-task-color'>no task for tomorrow</p>:null}
                         </div>
                     </div>
                 </div>

@@ -14,17 +14,16 @@ const Tasks = ({task,history}) => {
     return ( 
         <div>
            <li className='list-item'>
-            <span>{task.title}</span>
-            <div className="buttons">
-                <button className='task-btn' aria-label='delete button' onClick={()=> updatedTask(task.id)}><FaAwe.FaTrashAlt/></button>
-                <button className='task-btn' aria-label='play button' onClick={()=> playTask()}><FaAwe.FaPlayCircle/></button>
-            </div>
-           
-        </li>
-        <li className='list-item'>
-            <span>{task.date}</span>
-        </li>
-        <hr></hr>  
+                <span>{task.title}</span>
+                <div className="buttons">
+                    <button className='task-btn' aria-label='delete button' onClick={()=> updatedTask(task.id)}><FaAwe.FaTrashAlt/></button>
+                    <button className='task-btn' aria-label='play button' onClick={()=> playTask()}><FaAwe.FaPlayCircle/></button>
+                </div>
+            </li>
+            <li className='list-item'>
+               <span>{task.date}</span>
+            </li>
+            <hr></hr>  
         </div>
      );
 }
