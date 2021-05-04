@@ -21,7 +21,7 @@ function App() {
     <>
         <div>
         
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
              
               <NavBar/>
               <Switch>
