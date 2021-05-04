@@ -25,7 +25,7 @@ function App() {
              
               <NavBar/>
               <Switch>
-                <Route exact path='/' ><Pomodoro/></Route>
+                <Route exact path='/pomodoro-React' ><Pomodoro/></Route>
                 <Route  path='/add-task' ><AddTask/></Route>
                 <Route  path='/today' ><TodayTask/></Route>
                 <Route  path='/tomorrow' ><Tomorrow/></Route>
