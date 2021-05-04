@@ -10,7 +10,7 @@ const TaskList = () => {
                         {tasks.map((task)=> 
                                 {return <Tasks task={task} key={task.id}/>}
                             )}
-                    </ul> : <p> No Task</p>}
+                    </ul> : <p className='no-task-color'> No Task</p>}
         </div>
      );
 }

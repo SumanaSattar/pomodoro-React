@@ -1,33 +1,24 @@
 import { useContext,useState} from 'react'
 import {SettingContext} from './../../context/setting-context'
-
-
 import DatePicker from "react-datepicker";
 import subDays from "date-fns/subDays";
-
 import "react-datepicker/dist/react-datepicker.css";
 import './add-task.styles.css'
 
 const TaskForm = () =>  {
 
       const[task,setTask]=useState('');
-     
-
       const {addTask,formattingDate}=useContext(SettingContext);
     
-
       const submitHandler = (e) => {
           e.preventDefault();
           addTask(task,formattingDate(startDate)); 
-          setTask(" ")
-         
-          
+          setTask(" ")  
         }
+
       const  changeHandler = (e) => {
-        setTask(e.target.value);
-        console.log(task);
-          
-  }
+        setTask(e.target.value);       
+      }
   const [startDate, setStartDate] = useState(new Date());
  
     return ( 

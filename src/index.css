@@ -1,12 +1,16 @@
+
 html {
-  background: rgb(34,193,195);
-  background: linear-gradient(to bottom, rgba(34,193,195,1) 28%, rgba(45,92,253,1) 100%);
-  background-repeat: no-repeat;
+ 
   background-size: cover;
   width: 100%;
   height: 100%;
 }
+
 body {
+  background: linear-gradient(to bottom, rgba(34,193,195,1) 28%, rgba(45,92,253,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -90,12 +94,15 @@ button {
   background-color:rgba(34,193,195,1);
   color:white;
 }
+
 .form-container {
   text-align: center;
 }
+
 .input-wrapper {
   margin: 1.5rem;
 }
+
 .input-wrapper input {
   height: 30px;
   width: 30px;
@@ -108,15 +115,19 @@ button {
   text-align: center;
   font-size: 14pt;
 }
+
 .input-label{
   font-size: 20px;
 }
+
 .react-datepicker__navigation--previous {
   left:0;
 }
+
 .react-datepicker__navigation--previous {
   right:0;
 }
+
 .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range {
   
   background-color:rgb(35, 194, 197); 

@@ -7,10 +7,12 @@ const PlayTask = () => {
      const closeTask = () => {
          settingPlay(0);
      }
+
      const doneHandled = ()=> {
         settingPlay(0);
         updatedTask(taskPomodoro.id)
      }
+     
     return ( 
         <div className="play-container">
             <span>{taskPomodoro.title} </span>

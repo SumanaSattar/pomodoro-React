@@ -23,21 +23,21 @@ const SettingContextProvider = (props) => {
     const [unfinishedCheck,setUnfinishedCheck] = useState(false);
     const [taskPomodoro,setTaskPomodoro] = useState([])
     const [play,setPlay] = useState(0);
+    const [ariaLabel , setAriaLabel] = useState(false);
 
     const addTask = (title,date) => {
        setTasks([{title:title,id:uuidv4(),date:date},...tasks])
-       console.log(tasks.id)
     }
     const updatedTask = (key) => {
         setTasks(tasks.filter(num=>num.id !== key))
-        console.log(setTasks(tasks.filter(num=>num.id !== key)))
-
+    }
+    const settingAriaLabel = (aria) => {
+          setAriaLabel(!aria)
     }
     const settingPlay = (val) => {
         setPlay(val);
     }
     const formattingDate = (dateObject) => {
-        console.log(dateObject);
         const date =dateObject.getDate();
         const month = dateObject.getMonth();
         const year = dateObject.getFullYear();
@@ -123,6 +123,7 @@ const SettingContextProvider = (props) => {
             date,
             play,
             taskPomodoro,
+            ariaLabel,
             settingTaskPomodoro,
             settingPlay,
             updatedTask,
@@ -136,6 +137,7 @@ const SettingContextProvider = (props) => {
             settingBtn,
             addTask,
             formattingDate,
+            settingAriaLabel,
             children
         }}>
             {props.children}
